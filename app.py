@@ -4,12 +4,13 @@ import time
 
 import pandas as pd
 import numpy as np
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import train_test_split
+# from sklearn.tree import DecisionTreeClassifier
+# from sklearn.model_selection import train_test_split
 
 from functions import user_input, decode, advice
 
-# Load the model
+# Load the model & dataset
+df = pd.read_csv("diabetes_data_final.csv")
 model = pickle.load(open('model.pkl', 'rb'))
 
 # Header
@@ -18,14 +19,12 @@ st.divider()
 
 # Dataset
 st.write(" ## Dataset")
-df = pd.read_csv("diabetes_data_final.csv")
-X = df.drop(["class"], axis=1)
 df_display = decode(df)
 st.write(df_display)
-st.write(len(df))
 st.divider()
 
 
+X = df.drop(["class"], axis=1)
 inputs = user_input(X)
 
 if st.button("Predict"):
@@ -42,4 +41,4 @@ if st.button("Predict"):
 
     st.divider()
 
-    advice(inputs)
+    advice(inputs, result)
