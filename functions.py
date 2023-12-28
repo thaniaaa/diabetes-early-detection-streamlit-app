@@ -4,6 +4,8 @@ import pandas as pd
 def user_input(X):
     choice = ["Yes", "No"]
 
+    st.header("Interface")
+    st.divider()
     st.write(" ### Age")
     st.write("Lorem ipsum dolor sit amet conseptetum")
     age = st.slider("# Age", 10, 90)
@@ -148,7 +150,140 @@ def advice(data):
 
     if data1.loc[0, 'polyuria'] == 1:
         st.write(" ### Warning!! polyuria")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
         st.divider()
+
+    if data1.loc[0, 'polydipsia'] == 1:
+        st.write(" ### Warning!! polydipsia")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
     if data1.loc[0, 'sudden_weight_loss'] == 1:
         st.write(" ### Warning!! sudden weight loss")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'weakness'] == 1:
+        st.write(" ### Warning!! weakness")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'polyphagia'] == 1:
+        st.write(" ### Warning!! polyphagia")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'genital_thrush'] == 1:
+        st.write(" ### Warning!! genital_thrush")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'visual_blurring'] == 1:
+        st.write(" ### Warning!! visual_blurring")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'itching'] == 1:
+        st.write(" ### Warning!! itching")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'irritability'] == 1:
+        st.write(" ### Warning!! irritability")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'delayed_healing'] == 1:
+        st.write(" ### Warning!! delayed_healing")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'partial_paresis'] == 1:
+        st.write(" ### Warning!! partial_paresis")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'muscle_stiffness'] == 1:
+        st.write(" ### Warning!! muscle_stiffness")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'alopecia'] == 1:
+        st.write(" ### Warning!! alopecia")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
+        st.divider()
+
+    if data1.loc[0, 'obesity'] == 1:
+        st.write(" ### Warning!! obesity")
+        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.markdown('''
+            * Lorem
+            * Ipsum
+            * Dolor
+        ''')
         st.divider()

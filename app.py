@@ -1,5 +1,6 @@
 import streamlit as st
 import pickle
+import time
 
 import pandas as pd
 import numpy as np
@@ -12,7 +13,7 @@ from functions import user_input, decode, advice
 model = pickle.load(open('model.pkl', 'rb'))
 
 # Header
-st.write(" # Hello world :)")
+st.title("Diabetes early detection system")
 st.divider()
 
 # Dataset
@@ -28,6 +29,10 @@ st.divider()
 inputs = user_input(X)
 
 if st.button("Predict"):
+    with st.spinner('Wait for it...'):
+        time.sleep(1)
+
+    # st.balloons()
     result = model.predict(inputs)
 
     if result == 1:
