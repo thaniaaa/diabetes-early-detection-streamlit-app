@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 
-from functions import user_input, decode
+from functions import user_input, decode, advice
 
 # Load the model
 model = pickle.load(open('model.pkl', 'rb'))
@@ -21,7 +21,6 @@ df = pd.read_csv("diabetes_data_final.csv")
 X = df.drop(["class"], axis=1)
 df_display = decode(df)
 st.write(df_display)
-# st.write(df)
 st.write(len(df))
 st.divider()
 
@@ -32,6 +31,10 @@ if st.button("Predict"):
     result = model.predict(inputs)
 
     if result == 1:
-        st.write(" ## Positive")
+        st.error(" ## You're detected as positive diabetes")
     else:
-        st.write(" ## Negative")
+        st.success(" ## You're detected as negative diabetes")
+
+    st.divider()
+
+    advice(inputs)

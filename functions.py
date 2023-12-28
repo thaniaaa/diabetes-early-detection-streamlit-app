@@ -4,12 +4,12 @@ import pandas as pd
 def user_input(X):
     choice = ["Yes", "No"]
 
-    st.write(" ### Lorem ipsum")
+    st.write(" ### Age")
     st.write("Lorem ipsum dolor sit amet conseptetum")
     age = st.slider("# Age", 10, 90)
     st.divider()
 
-    st.write(" ### Lorem ipsum")
+    st.write(" ### Gender")
     st.write("Lorem ipsum dolor sit amet conseptetum")
     gender = st.radio("", ["Male", "Female"])
     st.divider()
@@ -24,39 +24,63 @@ def user_input(X):
     polydipsia = st.radio("Polydipsia?", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     sudden_weight_loss = st.radio("Sudden weight loss", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     weakness = st.radio("Weakness", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     polyphagia = st.radio("Polyphagia?", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     visual_blurring = st.radio("Visual blurring?", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     genital_thrush = st.radio("Genital thrush?", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     itching = st.radio("Itching?", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     irritability = st.radio("Irritability?", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     delayed_healing = st.radio("Delayed healing?", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     partial_paresis = st.radio("Partial paresis?", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     muscle_stiffness = st.radio("Muscle stiffness?", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     alopecia = st.radio("Alopecia?", choice)
     st.divider()
 
+    st.write(" ### Lorem ipsum")
+    st.write("Lorem ipsum dolor sit amet conseptetum")
     obesity = st.radio("Obesity?", choice)
     st.divider()
 
@@ -113,3 +137,18 @@ def decode(data):
     decoded["age"] = data["age"]
     
     return decoded
+
+def advice(data):
+    data1 = data
+    # data1 = data1.to_dict()
+
+    st.write("# Advice")
+    # st.write(data1)
+    # st.divider()
+
+    if data1.loc[0, 'polyuria'] == 1:
+        st.write(" ### Warning!! polyuria")
+        st.divider()
+    if data1.loc[0, 'sudden_weight_loss'] == 1:
+        st.write(" ### Warning!! sudden weight loss")
+        st.divider()
