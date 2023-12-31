@@ -7,11 +7,12 @@ import numpy as np
 # from sklearn.tree import DecisionTreeClassifier
 # from sklearn.model_selection import train_test_split
 
-from functions import user_input, decode, advice
+from functions import user_input, decode, advice, train_data
 
 # Load the model & dataset
 df = pd.read_csv("diabetes_data_final.csv")
-model = pickle.load(open('model.pkl', 'rb'))
+# model_load = pickle.load(open('model.pkl', 'rb'))
+model = train_data(df)
 
 # Header
 st.title("Deteksi dini diabetes")
