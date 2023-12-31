@@ -14,7 +14,7 @@ df = pd.read_csv("diabetes_data_final.csv")
 model = pickle.load(open('model.pkl', 'rb'))
 
 # Header
-st.title("Diabetes early detection system")
+st.title("Deteksi dini diabetes")
 st.divider()
 
 # Dataset
@@ -25,19 +25,22 @@ st.divider()
 
 
 X = df.drop(["class"], axis=1)
-inputs = user_input(X)
 
-if st.button("Predict"):
-    with st.spinner('Wait for it...'):
+with st.sidebar:
+    inputs = user_input(X)
+    predict_button = st.button("Prediksi")
+
+if predict_button:
+    with st.spinner('Tunggu sebentar...'):
         time.sleep(1)
 
     # st.balloons()
     result = model.predict(inputs)
 
     if result == 1:
-        st.error(" ## You're detected as positive diabetes")
+        st.error(" ## Anda terdeteksi dini positif diabetes")
     else:
-        st.success(" ## You're detected as negative diabetes")
+        st.success(" ## Anda terdeteksi dini negatif diabetes")
 
     st.divider()
 

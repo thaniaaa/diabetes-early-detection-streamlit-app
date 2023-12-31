@@ -43,12 +43,12 @@ def user_input(X):
 
     st.write(" ### Visual blurring")
     st.write("Penglihatan kabur")
-    visual_blurring = st.radio("Visual blurring?", choice)
+    visual_blurring = st.radio("Visual blurring", choice)
     st.divider()
 
     st.write(" ### Genital Thrush")
     st.write("Infeksi jamur Candida pada area genital. ")
-    genital_thrush = st.radio("Genital thrush?", choice)
+    genital_thrush = st.radio("Genital thrush", choice)
     st.divider()
 
     st.write(" ### Itching")
@@ -58,32 +58,32 @@ def user_input(X):
 
     st.write(" ### Irritability")
     st.write("Mudah marah pada hal kecil")
-    irritability = st.radio("Irritability?", choice)
+    irritability = st.radio("Irritability", choice)
     st.divider()
 
     st.write(" ### Dellayed Healing")
     st.write("Waktu penyembuhan luka lama")
-    delayed_healing = st.radio("Delayed healing?", choice)
+    delayed_healing = st.radio("Delayed healing", choice)
     st.divider()
 
     st.write(" ### Partial paresis")
     st.write("Kelumpuhan sebagian")
-    partial_paresis = st.radio("Partial paresis?", choice)
+    partial_paresis = st.radio("Partial paresis", choice)
     st.divider()
 
     st.write(" ### Muscle stiffness")
     st.write("Kekakukan otot")
-    muscle_stiffness = st.radio("Muscle stiffness?", choice)
+    muscle_stiffness = st.radio("Muscle stiffness", choice)
     st.divider()
 
     st.write(" ### Alopecia")
     st.write("Rambut rontok")
-    alopecia = st.radio("Alopecia?", choice)
+    alopecia = st.radio("Alopecia", choice)
     st.divider()
 
     st.write(" ### Obesity")
     st.write("Berat badan berlebih")
-    obesity = st.radio("Obesity?", choice)
+    obesity = st.radio("Obesity", choice)
     st.divider()
 
     data = {
@@ -164,10 +164,8 @@ def advice(data, result):
 
 
     if data.loc[0, 'polyuria'] == 1:
-        st.write(" ### Warning!! polyuria")
-        st.write("Polyuria, yang merupakan peningkatan produksi urin dan peningkatan frekuensi buang air kecil, bisa menjadi tanda adanya masalah dengan kontrol gula darah pada penderita diabetes. Peningkatan kadar glukosa dalam darah dapat menyebabkan ginjal bekerja lebih keras untuk menghilangkan kelebihan glukosa dari tubuh, yang akhirnya dapat menyebabkan peningkatan produksi urin.
-
-        ")
+        st.write(" ### Polyuria")
+        st.write("Polyuria, yang merupakan peningkatan produksi urin dan peningkatan frekuensi buang air kecil, bisa menjadi tanda adanya masalah dengan kontrol gula darah pada penderita diabetes. Peningkatan kadar glukosa dalam darah dapat menyebabkan ginjal bekerja lebih keras untuk menghilangkan kelebihan glukosa dari tubuh, yang akhirnya dapat menyebabkan peningkatan produksi urin.")
         st.markdown('''
             * Pastikan untuk memantau kadar gula darah secara teratur. Polyuria bisa menjadi tanda bahwa kontrol gula darah perlu ditingkatkan.
             * Tinjau kembali pola makan dan aktivitas fisik. Diet sehat dan aktifitas fisik teratur dapat membantu menjaga kadar gula darah dalam kisaran normal.
@@ -176,7 +174,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'polydipsia'] == 1:
-        st.write(" ### Warning!! polydipsia")
+        st.write(" ### Polydipsia")
         st.write("Polydipsia adalah kondisi di mana seseorang mengalami haus berlebihan. Pada pasien diabetes, polydipsia dapat menjadi tanda ketidakseimbangan kadar gula darah. ")
         st.markdown('''
             * Pastikan untuk memantau kadar gula darah secara teratur. Polyuria bisa menjadi tanda bahwa kontrol gula darah perlu ditingkatkan.
@@ -186,7 +184,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'sudden_weight_loss'] == 1:
-        st.write(" ### Warning!! sudden weight loss")
+        st.write(" ### Penurunan berat badan secara tiba-tiba")
         st.write("Penurunan berat badan yang tiba-tiba dapat menjadi tanda adanya masalah kesehatan yang mendasarinya.")
         st.markdown('''
             * Pertimbangkan adanya faktor-faktor psikologis atau stres yang dapat mempengaruhi pola makan dan berat badan. Kondisi kesehatan mental seperti depresi atau kecemasan juga dapat berkontribusi pada penurunan berat badan.
@@ -196,7 +194,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'weakness'] == 1:
-        st.write(" ### Warning!! weakness")
+        st.write(" ### Weakness")
         st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
         st.markdown('''
             * Lorem
