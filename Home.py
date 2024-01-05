@@ -11,7 +11,7 @@ df = pd.read_csv("diabetes_data_final.csv")
 model = train_data(df)
 
 # Header
-st.title("Deteksi dini diabetes (diganti)")
+st.title("Selamat Datang di Aplikasi Deteksi Dini Diabetes!")
 st.divider()
 st.markdown('''
             Selamat datang di Aplikasi Deteksi Dini Diabetes, inovasi terkini dalam pencegahan dan manajemen kesehatan. Kami percaya bahwa pencegahan lebih baik daripada pengobatan, itulah mengapa kami hadir dengan solusi yang memungkinkan Anda mengidentifikasi risiko diabetes sejak dini berdasarkan pola hidup anda.
