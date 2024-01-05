@@ -23,7 +23,7 @@ def user_input(X):
     st.divider()
     st.write(" ### Age")
     st.write("Usia")
-    age = st.slider("# Age", 10, 90)
+    age = st.slider("# Age", 16, 90)
     st.divider()
 
     st.write(" ### Gender")
@@ -179,7 +179,7 @@ def advice(data, result):
 
 
     if data.loc[0, 'polyuria'] == 1:
-        st.write(" ### Warning!! polyuria")
+        st.write(" ### Anda Sering Buang Air Kecil")
         st.write("Polyuria, yang merupakan peningkatan produksi urin dan peningkatan frekuensi buang air kecil, bisa menjadi tanda adanya masalah dengan kontrol gula darah pada penderita diabetes. Peningkatan kadar glukosa dalam darah dapat menyebabkan ginjal bekerja lebih keras untuk menghilangkan kelebihan glukosa dari tubuh, yang akhirnya dapat menyebabkan peningkatan produksi urin.")
         st.markdown('''
             * Pastikan untuk memantau kadar gula darah secara teratur. Polyuria bisa menjadi tanda bahwa kontrol gula darah perlu ditingkatkan.
@@ -189,7 +189,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'polydipsia'] == 1:
-        st.write(" ### Warning!! polydipsia")
+        st.write(" ### Anda Sering Merasa Haus")
         st.write("Polydipsia adalah kondisi di mana seseorang mengalami haus berlebihan. Pada pasien diabetes, polydipsia dapat menjadi tanda ketidakseimbangan kadar gula darah. ")
         st.markdown('''
             * Pastikan untuk memantau kadar gula darah secara teratur. Polyuria bisa menjadi tanda bahwa kontrol gula darah perlu ditingkatkan.
@@ -199,7 +199,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'sudden_weight_loss'] == 1:
-        st.write(" ### Warning!! sudden weight loss")
+        st.write(" ### Anda Mengalami Penurunan Berat Badan Secara Tiba-tiba ")
         st.write("Penurunan berat badan yang tiba-tiba dapat menjadi tanda adanya masalah kesehatan yang mendasarinya.")
         st.markdown('''
             * Pertimbangkan adanya faktor-faktor psikologis atau stres yang dapat mempengaruhi pola makan dan berat badan. Kondisi kesehatan mental seperti depresi atau kecemasan juga dapat berkontribusi pada penurunan berat badan.
@@ -209,8 +209,8 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'weakness'] == 1:
-        st.write(" ### Warning!! weakness")
-        st.write("Anda mengalami kelelahan")
+        st.write(" ### Anda Mengalami Kelelahan")
+        # st.write("Anda mengalami kelelahan")
         st.markdown('''
             * Pastikan Anda mendapatkan waktu tidur yang cukup. Tidur yang berkualitas adalah kunci untuk pemulihan fisik dan mental.
             * Coba teknik-teknik relaksasi seperti meditasi, pernapasan dalam, atau yoga untuk mengelola stres. Stres yang berlebihan dapat menyebabkan kelelahan.
@@ -219,7 +219,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'polyphagia'] == 1:
-        st.write(" ### Warning!! polyphagia")
+        st.write(" ### Anda Mengalami Nafsu Makan Berlebih")
         st.write("Polyphagia adalah kondisi di mana seseorang mengalami rasa lapar yang berlebihan atau nafsu makan yang sangat kuat. Kondisi ini dapat terkait dengan berbagai penyakit, termasuk diabetes. ")
         st.markdown('''
             * Membagi makanan menjadi porsi kecil dan makan lebih sering dalam sehari. Ini dapat membantu menjaga kadar gula darah tetap stabil dan mengurangi rasa lapar yang tiba-tiba.
@@ -228,7 +228,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'genital_thrush'] == 1:
-        st.write(" ### Warning!! genital_thrush")
+        st.write(" ### Anda Mengalami Kandidas Genital")
         st.write("Genital thrush, atau kandidiasis genital, disebabkan oleh pertumbuhan berlebihan jamur Candida pada area genital.")
         st.markdown('''
             * Hindari faktor-faktor yang dapat memicu atau memperburuk infeksi, seperti pakaian ketat, pemakaian pantyliner terlalu lama, atau penggunaan sabun atau produk perawatan pribadi yang mengandung bahan kimia yang dapat menyebabkan iritasi.
@@ -238,7 +238,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'visual_blurring'] == 1:
-        st.write(" ### Warning!! visual_blurring")
+        st.write(" ### Anda Mengalami Penglihatan Kabur")
         st.write("Anda mengalami pengaburan visual atau visual blurring, hal tersebut dapat disebabkan oleh berbagai faktor, termasuk masalah mata, stres, kelelahan, atau kondisi medis lainnya.")
         st.markdown('''
             * Jika pengaburan visual terkait dengan kelelahan mata atau terlalu lama menggunakan layar, istirahatkan mata Anda secara teratur.
@@ -248,7 +248,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'itching'] == 1:
-        st.write(" ### Warning!! itching")
+        st.write(" ### Anda Mengalami Gatal-gtal")
         st.write("Anda mengalami gatal (itching), berikut adalah beberapa langkah yang dapat diambil untuk meredakan atau mengatasi gejala tersebut: ")
         st.markdown('''
             * Jangan menggaruk terlalu keras, menggaruk secara berlebihan dapat merusak kulit dan memperparah gatal. Cobalah untuk tidak menggaruk atau lakukan dengan sangat hati-hati.
@@ -258,7 +258,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'irritability'] == 1:
-        st.write(" ### Warning!! irritability")
+        st.write(" ### Perasaan Anda Sensitive")
         st.write("Jika Anda mengalami iritabilitas, yang mencakup perasaan mudah tersinggung, merasa cepat marah, atau reaksi yang tidak proporsional terhadap situasi, cobalah lakukan bebrapa hal tersebut : ")
         st.markdown('''
             * Cobalah untuk meningkatkan kesadaran diri terhadap perasaan dan respons emosional Anda.
@@ -268,7 +268,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'delayed_healing'] == 1:
-        st.write(" ### Warning!! delayed_healing")
+        st.write(" ### Anda Mengalami Penyembuhan Luka Yang Lama")
         st.write("Jika Anda mengalami proses penyembuhan yang tertunda (delayed healing) setelah cedera, operasi, atau luka lainnya, berikut adalah beberapa langkah yang dapat diambil untuk mempromosikan penyembuhan yang lebih cepat:")
         st.markdown('''
             * Konsumsi Protein yang cukup, protein adalah bahan bangunan penting untuk sel-sel tubuh dan jaringan. Pastikan asupan protein Anda cukup untuk mendukung proses penyembuhan.
@@ -278,7 +278,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'partial_paresis'] == 1:
-        st.write(" ### Warning!! partial_paresis")
+        st.write(" ### Otot Anda Mengalami Kelemahan")
         st.write("Partial paresis, atau kelemahan sebagian pada otot atau kelompok otot, dapat disebabkan oleh berbagai faktor termasuk cedera saraf, trauma, atau kondisi medis tertentu.")
         st.markdown('''
             * Terapi fisik dapat membantu memperkuat otot, meningkatkan keseimbangan, dan meningkatkan koordinasi gerakan. 
@@ -287,7 +287,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'muscle_stiffness'] == 1:
-        st.write(" ### Warning!! muscle_stiffness")
+        st.write(" ### Otot Anda Mengalami Kekakuan")
         st.write("Jika Anda mengalami kekakuan otot (muscle stiffness), berikut adalah beberapa langkah yang dapat diambil untuk meredakan atau mengatasi gejala tersebut ")
         st.markdown('''
             * Lakukan peregangan ringan sebelum dan setelah beraktivitas fisik atau saat Anda merasa otot Anda kaku. Peregangan dapat membantu meningkatkan fleksibilitas otot dan mengurangi kekakuan.
@@ -297,7 +297,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'alopecia'] == 1:
-        st.write(" ### Warning!! alopecia")
+        st.write(" ### Anda Mengalami Rambut Rontok")
         st.write(" Jika Anda mengalami alopecia, berikut adalah beberapa langkah yang dapat Anda pertimbangkan: ")
         st.markdown('''
             * Hindari penggunaan produk kimia atau perawatan rambut yang agresif yang dapat merusak folikel rambut dan memperburuk alopecia.
@@ -306,7 +306,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'obesity'] == 1:
-        st.write(" ### Warning!! obesity")
+        st.write(" ### Anda Mengalami Obesitas")
         st.write("Jika Anda mengalami obesitas, langkah-langkah yang diambil untuk menangani kondisi tersebut melibatkan kombinasi perubahan gaya hidup, pola makan sehat, dan aktivitas fisik. Berikut adalah beberapa saran umum yang dapat membantu Anda mengelola obesitas: ")
         st.markdown('''
             * Fokus pada pola makan sehat yang terdiri dari berbagai macam makanan yang menyediakan nutrisi yang dibutuhkan tubuh. Kurangi konsumsi kalori berlebih, lemak jenuh, gula tambahan, dan garam.
