@@ -14,9 +14,12 @@ model = train_data(df)
 st.title("Deteksi dini diabetes (diganti)")
 st.divider()
 st.markdown('''
-            (**Deskripsi singkat**) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae est non elit blandit dictum. Maecenas eu faucibus ex. Aenean vel sem congue ante posuere interdum et imperdiet ipsum. Mauris sed libero maximus, dapibus odio id, ultricies dui. Morbi facilisis fringilla elit sed pellentesque. 
+            Selamat datang di Aplikasi Deteksi Dini Diabetes, inovasi terkini dalam pencegahan dan manajemen kesehatan. Kami percaya bahwa pencegahan lebih baik daripada pengobatan, itulah mengapa kami hadir dengan solusi yang memungkinkan Anda mengidentifikasi risiko diabetes sejak dini berdasarkan pola hidup anda.
+
+Aplikasi kami dirancang untuk memberikan pemahaman yang lebih baik tentang kesehatan Anda dan ramah digunakan semua kalangan masyarakat, termasuk orang awam, karena menggunakan bahasa yang mudah dimengerti dan tidak menggunakan istilah-istilah kedokteran yang rumit.
+
+     Kenali Risiko Diabetes Anda Sebelum Terlambat!
             
-            Nullam maximus tempor eros, sit amet tincidunt lorem varius quis. Maecenas feugiat sit amet nibh eget pretium. Sed in turpis quis nunc egestas ultricies. Quisque iaculis tellus nec semper volutpat. Maecenas sed ex rutrum nisi tincidunt viverra sit amet et tortor. In sodales, neque at mattis accumsan, tortor lectus feugiat diam, non cursus ante mi eget.
             ''')
 st.divider()
 
