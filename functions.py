@@ -58,12 +58,12 @@ def user_input(X):
 
     st.write(" ### Visual blurring")
     st.write("Penglihatan kabur")
-    visual_blurring = st.radio("Visual blurring", choice)
+    visual_blurring = st.radio("Visual blurring?", choice)
     st.divider()
 
     st.write(" ### Genital Thrush")
     st.write("Infeksi jamur Candida pada area genital. ")
-    genital_thrush = st.radio("Genital thrush", choice)
+    genital_thrush = st.radio("Genital thrush?", choice)
     st.divider()
 
     st.write(" ### Itching")
@@ -73,32 +73,32 @@ def user_input(X):
 
     st.write(" ### Irritability")
     st.write("Mudah marah pada hal kecil")
-    irritability = st.radio("Irritability", choice)
+    irritability = st.radio("Irritability?", choice)
     st.divider()
 
     st.write(" ### Dellayed Healing")
     st.write("Waktu penyembuhan luka lama")
-    delayed_healing = st.radio("Delayed healing", choice)
+    delayed_healing = st.radio("Delayed healing?", choice)
     st.divider()
 
     st.write(" ### Partial paresis")
     st.write("Kelumpuhan sebagian")
-    partial_paresis = st.radio("Partial paresis", choice)
+    partial_paresis = st.radio("Partial paresis?", choice)
     st.divider()
 
     st.write(" ### Muscle stiffness")
     st.write("Kekakukan otot")
-    muscle_stiffness = st.radio("Muscle stiffness", choice)
+    muscle_stiffness = st.radio("Muscle stiffness?", choice)
     st.divider()
 
     st.write(" ### Alopecia")
     st.write("Rambut rontok")
-    alopecia = st.radio("Alopecia", choice)
+    alopecia = st.radio("Alopecia?", choice)
     st.divider()
 
     st.write(" ### Obesity")
     st.write("Berat badan berlebih")
-    obesity = st.radio("Obesity", choice)
+    obesity = st.radio("Obesity?", choice)
     st.divider()
 
     data = {
@@ -164,7 +164,7 @@ def advice(data, result):
     if result == 1:
         st.subheader(
             '''
-            Kami menyarankan anda untuk melakukan pemeriksaan ke layanan kesehatan terdekat 
+            Segera berkonsultasi dengan dokter atau profesional kesehatan untuk mendapatkan diagnosis yang tepat 
             
             Berikut bebrapa hal yang bisa dilakukan untuk meningkatkan kesehatan anda :
             '''
@@ -179,7 +179,7 @@ def advice(data, result):
 
 
     if data.loc[0, 'polyuria'] == 1:
-        st.write(" ### Polyuria")
+        st.write(" ### Warning!! polyuria")
         st.write("Polyuria, yang merupakan peningkatan produksi urin dan peningkatan frekuensi buang air kecil, bisa menjadi tanda adanya masalah dengan kontrol gula darah pada penderita diabetes. Peningkatan kadar glukosa dalam darah dapat menyebabkan ginjal bekerja lebih keras untuk menghilangkan kelebihan glukosa dari tubuh, yang akhirnya dapat menyebabkan peningkatan produksi urin.")
         st.markdown('''
             * Pastikan untuk memantau kadar gula darah secara teratur. Polyuria bisa menjadi tanda bahwa kontrol gula darah perlu ditingkatkan.
@@ -189,7 +189,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'polydipsia'] == 1:
-        st.write(" ### Polydipsia")
+        st.write(" ### Warning!! polydipsia")
         st.write("Polydipsia adalah kondisi di mana seseorang mengalami haus berlebihan. Pada pasien diabetes, polydipsia dapat menjadi tanda ketidakseimbangan kadar gula darah. ")
         st.markdown('''
             * Pastikan untuk memantau kadar gula darah secara teratur. Polyuria bisa menjadi tanda bahwa kontrol gula darah perlu ditingkatkan.
@@ -199,7 +199,7 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'sudden_weight_loss'] == 1:
-        st.write(" ### Penurunan berat badan secara tiba-tiba")
+        st.write(" ### Warning!! sudden weight loss")
         st.write("Penurunan berat badan yang tiba-tiba dapat menjadi tanda adanya masalah kesehatan yang mendasarinya.")
         st.markdown('''
             * Pertimbangkan adanya faktor-faktor psikologis atau stres yang dapat mempengaruhi pola makan dan berat badan. Kondisi kesehatan mental seperti depresi atau kecemasan juga dapat berkontribusi pada penurunan berat badan.
@@ -209,111 +209,108 @@ def advice(data, result):
         st.divider()
 
     if data.loc[0, 'weakness'] == 1:
-        st.write(" ### Weakness")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write(" ### Warning!! weakness")
+        st.write("Anda mengalami kelelahan")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Pastikan Anda mendapatkan waktu tidur yang cukup. Tidur yang berkualitas adalah kunci untuk pemulihan fisik dan mental.
+            * Coba teknik-teknik relaksasi seperti meditasi, pernapasan dalam, atau yoga untuk mengelola stres. Stres yang berlebihan dapat menyebabkan kelelahan.
+            * Pastikan Anda mendapatkan nutrisi yang cukup dan menjaga pola makan yang sehat. 
         ''')
         st.divider()
 
     if data.loc[0, 'polyphagia'] == 1:
         st.write(" ### Warning!! polyphagia")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write("Polyphagia adalah kondisi di mana seseorang mengalami rasa lapar yang berlebihan atau nafsu makan yang sangat kuat. Kondisi ini dapat terkait dengan berbagai penyakit, termasuk diabetes. ")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Membagi makanan menjadi porsi kecil dan makan lebih sering dalam sehari. Ini dapat membantu menjaga kadar gula darah tetap stabil dan mengurangi rasa lapar yang tiba-tiba.
+            * Makan makanan yang mengandung protein dan hindari makanan yang mengandung banyak gula
         ''')
         st.divider()
 
     if data.loc[0, 'genital_thrush'] == 1:
         st.write(" ### Warning!! genital_thrush")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write("Genital thrush, atau kandidiasis genital, disebabkan oleh pertumbuhan berlebihan jamur Candida pada area genital.")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Hindari faktor-faktor yang dapat memicu atau memperburuk infeksi, seperti pakaian ketat, pemakaian pantyliner terlalu lama, atau penggunaan sabun atau produk perawatan pribadi yang mengandung bahan kimia yang dapat menyebabkan iritasi.
+            * Pertahankan kebersihan area genital dengan mencucinya secara lembut dengan air dan sabun ringan. Hindari penggunaan sabun atau produk pembersih yang mengandung bahan kimia yang dapat mengiritasi.
+            * Saat mengalami infeksi, sebaiknya hindari hubungan seksual hingga infeksi sembuh sepenuhnya. Penggunaan kondom dapat membantu mencegah penyebaran infeksi.
         ''')
         st.divider()
 
     if data.loc[0, 'visual_blurring'] == 1:
         st.write(" ### Warning!! visual_blurring")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write("Anda mengalami pengaburan visual atau visual blurring, hal tersebut dapat disebabkan oleh berbagai faktor, termasuk masalah mata, stres, kelelahan, atau kondisi medis lainnya.")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Jika pengaburan visual terkait dengan kelelahan mata atau terlalu lama menggunakan layar, istirahatkan mata Anda secara teratur.
+            * Kurangi waktu paparan pada layar komputer, ponsel, atau perangkat elektronik lainnya. Gunakan filter anti-silau jika diperlukan.
+            * Pastikan pencahayaan di sekitar Anda memadai. Cahaya yang redup atau terlalu terang dapat memengaruhi kenyamanan mata.
         ''')
         st.divider()
 
     if data.loc[0, 'itching'] == 1:
         st.write(" ### Warning!! itching")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write("Anda mengalami gatal (itching), berikut adalah beberapa langkah yang dapat diambil untuk meredakan atau mengatasi gejala tersebut: ")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Jangan menggaruk terlalu keras, menggaruk secara berlebihan dapat merusak kulit dan memperparah gatal. Cobalah untuk tidak menggaruk atau lakukan dengan sangat hati-hati.
+            * Terapkan kompres dingin pada area yang gatal untuk membantu meredakan peradangan dan mengurangi rasa gatal.
+            * Identifikasi dan hindari pemicu gatal jika mungkin. Ini bisa termasuk alergen, deterjen, atau sabun tertentu yang dapat menyebabkan reaksi kulit.
         ''')
         st.divider()
 
     if data.loc[0, 'irritability'] == 1:
         st.write(" ### Warning!! irritability")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write("Jika Anda mengalami iritabilitas, yang mencakup perasaan mudah tersinggung, merasa cepat marah, atau reaksi yang tidak proporsional terhadap situasi, cobalah lakukan bebrapa hal tersebut : ")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Cobalah untuk meningkatkan kesadaran diri terhadap perasaan dan respons emosional Anda.
+            * Olahraga teratur dapat membantu mengurangi stres, meningkatkan suasana hati, dan meredakan ketegangan emosional. Cobalah untuk melakukan aktivitas fisik yang Anda nikmati setiap hari.
+            * Identifikasi dan atasi faktor-faktor stres dalam hidup Anda. Manajemen stres yang efektif dapat membantu mengurangi iritabilitas.
         ''')
         st.divider()
 
     if data.loc[0, 'delayed_healing'] == 1:
         st.write(" ### Warning!! delayed_healing")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write("Jika Anda mengalami proses penyembuhan yang tertunda (delayed healing) setelah cedera, operasi, atau luka lainnya, berikut adalah beberapa langkah yang dapat diambil untuk mempromosikan penyembuhan yang lebih cepat:")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Konsumsi Protein yang cukup, protein adalah bahan bangunan penting untuk sel-sel tubuh dan jaringan. Pastikan asupan protein Anda cukup untuk mendukung proses penyembuhan.
+            * Minum air yang cukup, pertahankan tubuh terhidrasi dengan cukup minum air. Hidrasi yang baik membantu mendukung fungsi sel dan jaringan.
+            * Jaga pola makan yang sehat dengan asupan nutrisi yang cukup. Nutrisi seperti protein, vitamin C, dan zinc 
         ''')
         st.divider()
 
     if data.loc[0, 'partial_paresis'] == 1:
         st.write(" ### Warning!! partial_paresis")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write("Partial paresis, atau kelemahan sebagian pada otot atau kelompok otot, dapat disebabkan oleh berbagai faktor termasuk cedera saraf, trauma, atau kondisi medis tertentu.")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Terapi fisik dapat membantu memperkuat otot, meningkatkan keseimbangan, dan meningkatkan koordinasi gerakan. 
+            * Pastikan nutrisi Anda mencukupi.
         ''')
         st.divider()
 
     if data.loc[0, 'muscle_stiffness'] == 1:
         st.write(" ### Warning!! muscle_stiffness")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write("Jika Anda mengalami kekakuan otot (muscle stiffness), berikut adalah beberapa langkah yang dapat diambil untuk meredakan atau mengatasi gejala tersebut ")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Lakukan peregangan ringan sebelum dan setelah beraktivitas fisik atau saat Anda merasa otot Anda kaku. Peregangan dapat membantu meningkatkan fleksibilitas otot dan mengurangi kekakuan.
+            * Kompres panas dapat membantu mengendurkan otot dan meningkatkan aliran darah, sementara kompres dingin dapat mengurangi peradangan dan mengurangi kekakuan.
+            * Magnesium dapat membantu mengendurkan otot. Konsumsi makanan yang kaya magnesium atau pertimbangkan suplemen magnesium setelah berkonsultasi dengan profesional kesehatan.
         ''')
         st.divider()
 
     if data.loc[0, 'alopecia'] == 1:
         st.write(" ### Warning!! alopecia")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write(" Jika Anda mengalami alopecia, berikut adalah beberapa langkah yang dapat Anda pertimbangkan: ")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Hindari penggunaan produk kimia atau perawatan rambut yang agresif yang dapat merusak folikel rambut dan memperburuk alopecia.
+            * Perhatikan kesehatan mental anda dan kurangi stress
         ''')
         st.divider()
 
     if data.loc[0, 'obesity'] == 1:
         st.write(" ### Warning!! obesity")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+        st.write("Jika Anda mengalami obesitas, langkah-langkah yang diambil untuk menangani kondisi tersebut melibatkan kombinasi perubahan gaya hidup, pola makan sehat, dan aktivitas fisik. Berikut adalah beberapa saran umum yang dapat membantu Anda mengelola obesitas: ")
         st.markdown('''
-            * Lorem
-            * Ipsum
-            * Dolor
+            * Fokus pada pola makan sehat yang terdiri dari berbagai macam makanan yang menyediakan nutrisi yang dibutuhkan tubuh. Kurangi konsumsi kalori berlebih, lemak jenuh, gula tambahan, dan garam.
+            * Lakukan aktivitas fisik secara teratur. Mulailah dengan tingkat aktivitas yang sesuai dengan kondisi fisik Anda, dan tingkatkan secara bertahap. Aktivitas fisik membantu membakar kalori dan meningkatkan kesehatan jantung.
+            * Perhatikan ukuran porsi makan Anda. Mengurangi porsi makan dapat membantu mengontrol asupan kalori.
         ''')
         st.divider()
