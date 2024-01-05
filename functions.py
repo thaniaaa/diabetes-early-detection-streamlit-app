@@ -4,17 +4,25 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 
+
 def train_data(data):
     X = data.drop(["class"], axis=1)
     y = data["class"]
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+    X_train, _, y_train, _ = train_test_split(X, y, test_size=0.3, random_state=42)
 
     model = DecisionTreeClassifier(random_state=42, max_depth=5)
     model.fit(X_train, y_train)
 
     return model
 
+def get_split(data):
+    X = data.drop(["class"], axis=1)
+    y = data["class"]
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+    return X_train, X_test, y_train, y_test
 
 def user_input(X):
     choice = ["Yes", "No"]

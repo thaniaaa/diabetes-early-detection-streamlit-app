@@ -16,10 +16,9 @@ st.divider()
 st.markdown('''
             Selamat datang di Aplikasi Deteksi Dini Diabetes, inovasi terkini dalam pencegahan dan manajemen kesehatan. Kami percaya bahwa pencegahan lebih baik daripada pengobatan, itulah mengapa kami hadir dengan solusi yang memungkinkan Anda mengidentifikasi risiko diabetes sejak dini berdasarkan pola hidup anda.
 
-Aplikasi kami dirancang untuk memberikan pemahaman yang lebih baik tentang kesehatan Anda dan ramah digunakan semua kalangan masyarakat, termasuk orang awam, karena menggunakan bahasa yang mudah dimengerti dan tidak menggunakan istilah-istilah kedokteran yang rumit.
+            Aplikasi kami dirancang untuk memberikan pemahaman yang lebih baik tentang kesehatan Anda dan ramah digunakan semua kalangan masyarakat, termasuk orang awam, karena menggunakan bahasa yang mudah dimengerti dan tidak menggunakan istilah-istilah kedokteran yang rumit.
 
-     Kenali Risiko Diabetes Anda Sebelum Terlambat!
-            
+            Kenali Risiko Diabetes Anda Sebelum Terlambat!
             ''')
 st.divider()
 
