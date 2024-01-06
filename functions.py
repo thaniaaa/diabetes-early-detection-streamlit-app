@@ -43,6 +43,20 @@ def user_input(X):
         gender = st.selectbox("Apa jenis kelamin anda?", ["Male", "Female"])
         st.divider()
 
+        st.write(" ### Berat badan")
+        weight = st.slider("Berapa berat badan anda? (kg)", 0, 200, 70)
+        st.divider()
+
+        st.write(" ### Tinggi badan")
+        height = st.slider("Berapa tinggi badan anda? (cm)", 0, 200, 175)
+        st.divider()
+
+        bmi_score = weight / ((height/100)**2)
+        if bmi_score >= 30:
+            obesity = "Yes"
+        else:
+            obesity = "No"
+
         st.write(" #### Polyuria")
        # st.write("Apakah anda sering buang air kecil?")
         polyuria = st.selectbox("Apakah anda sering buang air kecil?", choice)
@@ -68,12 +82,13 @@ def user_input(X):
         polyphagia = st.selectbox("Apakah anda sering merasa lapar?", choice)
         st.divider()
 
+    with col2:
+
         st.write(" #### Visual blurring")
        # st.write("Penglihatan kabur")
         visual_blurring = st.selectbox("Apakah penglihatan anda kabur?", choice)
         st.divider()
 
-    with col2:
         st.write(" #### Genital Thrush")
        # st.write("Infeksi jamur Candida pada area genital. ")
         genital_thrush = st.selectbox("Apakah anda mengalami infeksi jamur pada area genital?", choice)
@@ -109,10 +124,10 @@ def user_input(X):
         alopecia = st.selectbox("Apakah anda mengalami rambut rontok?", choice)
         st.divider()
 
-        st.write(" #### Obesity")
-      #  st.write("Berat badan berlebih")
-        obesity = st.selectbox("Apakah anda mempunyai berat badan berlebih?", choice)
-        st.divider()
+    #     st.write(" #### Obesity")
+    #   #  st.write("Berat badan berlebih")
+    #     obesity = st.selectbox("Apakah anda mempunyai berat badan berlebih?", choice)
+    #     st.divider()
 
     data = {
             'gender':gender,
@@ -182,6 +197,12 @@ def advice(data, result):
             Berikut bebrapa hal yang bisa dilakukan untuk meningkatkan kesehatan anda :
             '''
                 )
+    elif (data.iloc[:, 1:15] == 0).all().all():
+        st.markdown(
+            '''
+            Kondisi kesehatan anda baik. tidak ada gejala kesehatan apapun (to be changed)
+            '''
+                )
     else:
         st.markdown('''
             Meskipun Anda terdeteksi negatif, Anda memiliki masalah kesehatan berikut.
@@ -189,7 +210,7 @@ def advice(data, result):
             Berikut hal yang dapat Anda lakukan untuk meningkatkan kesehatan Anda:
             ''')
 
-    with st.expander("Lihat saran: "):
+    with st.expander("Lihat seterusnya: "):
         if data.loc[0, 'polyuria'] == 1:
             st.write(" ### Anda Sering Buang Air Kecil")
             st.write("Polyuria, yang merupakan peningkatan produksi urin dan peningkatan frekuensi buang air kecil, bisa menjadi tanda adanya masalah dengan kontrol gula darah pada penderita diabetes. Peningkatan kadar glukosa dalam darah dapat menyebabkan ginjal bekerja lebih keras untuk menghilangkan kelebihan glukosa dari tubuh, yang akhirnya dapat menyebabkan peningkatan produksi urin.")
