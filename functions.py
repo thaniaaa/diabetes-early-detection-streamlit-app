@@ -200,7 +200,7 @@ def advice(data, result):
     elif (data.iloc[:, 1:15] == 0).all().all():
         st.markdown(
             '''
-            Kondisi kesehatan anda baik. tidak ada gejala kesehatan apapun (to be changed)
+            Kondisi kesehatan anda saat ini normal, namun tetap jaga kesehatan dan menjalankan pola hidup sehat.
             '''
                 )
     else:
