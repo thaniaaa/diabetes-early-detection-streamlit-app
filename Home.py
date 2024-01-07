@@ -40,9 +40,8 @@ if predict_button:
     else:
         st.success(" ## Anda terdeteksi dini negatif diabetes")
 
-    back_button = st.button("Kembali")
 
-    if back_button:
+    if st.button("Hapus"):
         st.rerun()
 
     st.divider()

@@ -13,10 +13,16 @@ st.divider()
 # Dataset
 df = pd.read_csv("diabetes_data_final.csv")
 st.subheader("Dataset")
+st.write("Data yang digunakan adalah data pasien Rumah Sakit Diabetes Sylhet di Sylhet Bangladesh dan telah disetujui oleh dokter.")
 df_display = decode(df)
 st.write(df_display)
+st.markdown(''' Data diperoleh dari:     https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction+dataset
+        ''')
 st.divider()
 
+# Penjelasan kolom dataset
+st.subheader("Deskripsi kolom dataset")
+st.write("Berikut deskripsi singkat mengenai kolom dalam dataset")
 attr_desc = pd.DataFrame([["age", "Usia"],
                            ["gender", "Jenis kelamin"],
                            ["polyuria", "Sering buang air kecil"],
@@ -33,9 +39,10 @@ attr_desc = pd.DataFrame([["age", "Usia"],
                            ["muscle_stiffness", "Kekakuan otot"],
                            ["alopecia", "Rambut rontok"],
                            ["obesity", "Berat badan berlebih"],
-                           ], columns=["Atribut/fitur", "Deskripsi"])
-st.subheader("Deskripsi atribut dataset")
+                           ["class", "Hasil deteksi dini diabetes (Positive/Negative)"]
+                           ], columns=["Kolom", "Deskripsi"])
 st.table(attr_desc)
+st.divider()
 
 st.subheader("Model & Akurasi")
 st.write("Kami menggunakan algoritma Decision Tree dengan hasil akurasi sebagai berikut:")
@@ -53,6 +60,7 @@ st.code('''
             macro avg       0.93    0.93    0.92       104
             weighted avg    0.93    0.92    0.92       104
         ''')
+st.divider()
 
 model = train_data(df)
 X_train, X_test, y_train, y_test = get_split(df)

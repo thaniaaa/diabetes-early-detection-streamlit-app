@@ -35,7 +35,7 @@ def user_input(X):
     with col1:
         st.write(" #### Age")
         #st.write("Usia")
-        age = st.slider("# Berapa usia anda?", 16, 90)
+        age = st.slider("# Berapa usia anda?", 16, 90, 35)
         st.divider()
         
         st.write(" #### Gender")
