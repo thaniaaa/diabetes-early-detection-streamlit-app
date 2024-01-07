@@ -73,3 +73,5 @@ cfdisplay = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=model.cla
 fig, ax = plt.subplots()
 cfdisplay.plot(ax=ax)
 st.pyplot(fig)
+st.divider()
+st.write("Github: https://github.com/yhfie/diabetes-early-detection-streamlit-app")

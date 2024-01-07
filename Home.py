@@ -47,3 +47,6 @@ if predict_button:
     st.divider()
 
     advice(inputs, result)
+
+st.divider()
+st.write("Github: https://github.com/yhfie/diabetes-early-detection-streamlit-app")
