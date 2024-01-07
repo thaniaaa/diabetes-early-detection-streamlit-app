@@ -74,4 +74,6 @@ fig, ax = plt.subplots()
 cfdisplay.plot(ax=ax)
 st.pyplot(fig)
 st.divider()
-st.write("Github: https://github.com/yhfie/diabetes-early-detection-streamlit-app")
+
+st.write("### GitHub")
+st.write("https://github.com/yhfie/diabetes-early-detection-streamlit-app")
