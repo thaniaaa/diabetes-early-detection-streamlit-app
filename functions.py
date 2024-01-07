@@ -27,7 +27,7 @@ def get_split(data):
 def user_input(X):
     choice = ["Yes", "No"]
 
-    st.subheader("Interface")
+    st.subheader("Bagaimana kondisi kesehatan anda saat ini? ")
     
 
     col1, col2 = st.columns(2)
